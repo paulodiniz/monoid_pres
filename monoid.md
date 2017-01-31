@@ -6,21 +6,28 @@
 
 #Paulo Diniz
 
-<br><br><br><br><br>
-- _**Bitcrowd**_ :heart:
-- twitter.com/paulodiniz
-- github.com/paulodiniz
+
+<br>
+
+```ruby
+                  Person
+                    .name("Paulo Diniz")
+                    .from("Brazil")
+                    .work("Bitcrowd")
+                    .github("paulodiniz")
+                    .twitter("paulodiniz")
+```
 
 ---
 
-# Mathematicians
+# STUFF
 <br>
 $$ 1 + 2 = 3 $$
 <br>
 
-- Bunch of things (integers)
-- A way to combine them (addition)
-- The result is another of these thing (integer)
+- Bunch of stuff (integers)
+- A way to combine stuff (addition)
+- The result is another stuff (integer)
 
 ---
 
@@ -120,7 +127,7 @@ end
 
 ---
 
-#[fit] Is Text under addition is a monoid?
+#[fit] Is Text under addition a monoid?
 
 ---
 

@@ -163,7 +163,7 @@ end
 
 ```ruby
 word_count(Text.new('wow much monoid'))
-=> 6
+=> 3
 ```
 ---
 

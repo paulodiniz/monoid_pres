@@ -85,18 +85,14 @@ $$ 1 + 2 + 3 + 4$$
 <br>
 $$ (1 + 2) + (3 + 4) $$
 <br>
-$$ sum1To2 + sum2To3 $$
+$$ sum1To2 + sum3To4 $$
 
 ---
 
 # Merge sort
 
-##Integers under *max* operation are monoids
 
-```ruby
-
-     max(3, max(4, 12)) == max(max(3, 4), 12)
-```
+![inline](merge.png)
 
 ---
 
@@ -195,13 +191,12 @@ _**because**_
 
 ---
 
-What if we apply *word_count* on each page 
-and then sum the results? Do we get the same result?
+*Text* under addition is a monoid
 
 ---
 
-- Text under addition is a monoid
-- Integer under addition is a monoid
+What if we apply *word_count* on each page
+and then sum the results? Do we get the same result?
 
 ---
 
@@ -230,7 +225,6 @@ $$ f(x * y) = f(x) * f(y) $$
 ![inline 100%](dog_math.gif)
 
 ```ruby
-
 word_count(part1 + part2) = word_count(part1) + word_count(part2)
 
 ```

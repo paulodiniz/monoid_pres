@@ -159,6 +159,7 @@ Text.new("much wow") + Text.new("") == Text.new("much wow")
 ---
 
 ```ruby
+# TODO: TDD
 def word_count(text)
   text.content.split(' ').length
 end
@@ -185,6 +186,11 @@ word_count(Text.new("wow " *1000) + Text.new("such " * 1000) + Text.new("text " 
 
 ---
 
+What if we apply *word_count* on each page
+and then sum the results? Do we get the same result?
+
+---
+
 *word_count* is a monoid
 
 _**because**_
@@ -194,11 +200,6 @@ _**because**_
 ---
 
 *Text* under addition is a monoid
-
----
-
-What if we apply *word_count* on each page
-and then sum the results? Do we get the same result?
 
 ---
 
@@ -236,31 +237,53 @@ word_count(part1 + part2) = word_count(part1) + word_count(part2)
 ```ruby
 texts = [ Text.new("wow " * 1000), Text.new("such " * 1000), Text.new("text " * 1000) ]
 
-word_count(texts.reduce(&:+)) #=> 3000
 
-texts.map { |t| word_count(t) }.reduce(&:+) #=> 3000
 
 ```
 
 ---
 
 ```ruby
-texts = [ Text.new("wow " * 1000), Text.new("such " * 1000), Text.new("text " * 1000) ]
+word_count(texts.reduce(&:+)) #=> 3000
+```
 
+---
+
+```ruby
+texts.map { |t| word_count(t) }.reduce(&:+) #=> 3000
+```
+
+---
+
+```ruby
 Parallel.map(texts, in_threads: 3) do |text|
   word_count(text)
 end.reduce(&:+) # => 3000
+```
+
+---
+
+# Faster? **_Maybe_**
+
+<br>
+
+```
+                                user     system      total        real
+reduce text                 0.800000   1.760000   2.560000 (  2.566135)
+map and reduce              0.370000   0.120000   0.490000 (  0.502499)
+parallel map in threads     0.530000   0.120000   0.650000 (  0.643666)
+parallel map in processes   0.000000   0.010000   0.950000 (  0.327908)
 
 ```
 
 ---
 
-# Questions?
+# Summing up
+- Try to divide your problem to smaller pieces
+- Take advantage of functional programming tools
+- Math is our friend
 
 ---
 
-
-
-
-
+# Thank you!
 

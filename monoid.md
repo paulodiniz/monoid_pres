@@ -285,5 +285,5 @@ parallel map in processes   0.000000   0.010000   0.950000 (  0.327908)
 
 ---
 
-# Thank you!
+![fit](thank_you.jpg)
 

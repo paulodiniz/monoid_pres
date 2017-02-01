@@ -1,6 +1,8 @@
 # *Monoids*
 
 #### ~~It's too dangerous to go alone~~
+#### ~~What is an integer again?~~
+#### ~~omg I don't know anything~~
 #### I have no idea what I'm doing
 ---
 

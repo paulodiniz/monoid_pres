@@ -6,18 +6,15 @@
 #### I have no idea what I'm doing
 ---
 
-#Paulo Diniz
-
-
 <br>
 
 ```ruby
-                  Person
-                    .name("Paulo Diniz")
-                    .from("Brazil")
-                    .work("Bitcrowd")
-                    .github("paulodiniz")
-                    .twitter("paulodiniz")
+              Person
+                .name("Paulo Diniz")
+                .from("Brazil")
+                .work("Bitcrowd")
+                .github("paulodiniz")
+                .twitter("paulodiniz")
 ```
 
 ---
@@ -75,7 +72,8 @@ $$ 0 + 1 = 1 $$
 
 ---
 
-# Why do I care about this?
+<!-- # Why do I care about this? -->
+![fit](dont_care.jpg)
 
 ---
 
